@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentin</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+
+        .Imagen{
+            width: 150px;
+            margin: -390px -400px -380px 550px;
+            margin-right:
+        }
+
+        .contenedor{
+            text-align: center;
+        }
+
+        p{
+           font-size: xx-large;
+           padding: 15%;
+           color:greenyellow;
+           font-family: 'Times New Roman', Times, serif;
+        }
+
+        button{
+            font-size: xx-large;
+            padding: 0,75em;
+        }
+
+        #yesBtn{
+            transform: translate(-100%,0);
+        }
+
+        #noBtn{
+            position: absolute;
+        }
+
+        body{
+            background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/414181318_418144107206227_7731617243866343561_n.jpg?stp=dst-jpg_p180x540&_nc_cat=104&ccb=1-7&_nc_sid=510075&_nc_ohc=LlGObtdFPqUAX_rZ1yr&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQhUz4EzT2HzsSF4zi7RCvnY7ijXX5YXmTAtPV79kunXQ&oe=65F1FE65);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="img/foto.jpg" class="Imagen" alt="">
+
+    <div class="contenedor">
+        <p>¿Queres ser mi san valentin?</p>
+        <button id="yesBtn">Si</button>
+        <button id="noBtn">No</button>
+    </div>
+    
+    
+    <script>
+        const yesBtn = document.querySelector('#yesBtn');
+
+        yesBtn.addEventListener('click', function () {
+    alert('Te amo :3')
+    });
+
+    const noBtn = document.querySelector('#noBtn');
+
+    noBtn.addEventListener('mouseover', function () {
+        const randomX = parseInt(Math.random()*100);
+        const randomY = parseInt(Math.random()*100);
+        noBtn.style.setProperty('top' ,randomY+'%');
+        noBtn.style.setProperty('left' ,randomX+'%');
+        noBtn.style.setProperty('transform','translate(-${randomX}%,-${randomY}%)');
+    })
+    </script>
+</body>
+</html>
